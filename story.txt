@@ -1,0 +1,48 @@
+A long time ago, in a galaxy far, far away
+first change
+
+Lab01 step:
+
+c288b017@E3002-09:~/repo-Lab01$ git add story.txt
+c288b017@E3002-09:~/repo-Lab01$ git commit
+[master (root-commit) c72802d] First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 story.txt
+c288b017@E3002-09:~/repo-Lab01$ git log
+commit c72802de2764fdd6f996978b65047f17a44da2ec (HEAD -> master)
+Author: Chengyuan Bai <c288b017@ku.edu>
+Date:   Sun Feb 7 20:34:59 2021 -0600
+
+    First commit
+c288b017@E3002-09:~/repo-Lab01$ git branch
+* master
+c288b017@E3002-09:~/repo-Lab01$ git branch solo
+c288b017@E3002-09:~/repo-Lab01$ git checkout solo
+Switched to branch 'solo'
+c288b017@E3002-09:~/repo-Lab01$ git add story.txt
+c288b017@E3002-09:~/repo-Lab01$ git commit
+[solo 0f05457] Second commit
+ 1 file changed, 1 insertion(+)
+c288b017@E3002-09:~/repo-Lab01$ git log
+commit 0f05457b3ee76e56fad1f168c315c0e5203cef95 (HEAD -> solo)
+Author: Chengyuan Bai <c288b017@ku.edu>
+Date:   Sun Feb 7 20:50:57 2021 -0600
+
+    Second commit
+
+commit c72802de2764fdd6f996978b65047f17a44da2ec (master)
+Author: Chengyuan Bai <c288b017@ku.edu>
+Date:   Sun Feb 7 20:34:59 2021 -0600
+
+    First commit
+c288b017@E3002-09:~/repo-Lab01$ git checkout master
+Switched to branch 'master'
+c288b017@E3002-09:~/repo-Lab01$ git diff
+c288b017@E3002-09:~/repo-Lab01$ git checkout master
+Already on 'master'
+c288b017@E3002-09:~/repo-Lab01$ git merge solo
+Updating c72802d..0f05457
+Fast-forward
+ story.txt | 1 +
+ 1 file changed, 1 insertion(+)
+

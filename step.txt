@@ -1,0 +1,31 @@
+c288b017@E3002-13:~/Lab02$ git add code.txt
+c288b017@E3002-13:~/Lab02$ git commit
+[master (root-commit) daa6573] First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 code.txt
+c288b017@E3002-13:~/Lab02$ git branch
+* master
+c288b017@E3002-13:~/Lab02$ git experiment
+git: 'experiment' is not a git command. See 'git --help'.
+c288b017@E3002-13:~/Lab02$ git branch experiment
+c288b017@E3002-13:~/Lab02$ git checkout experiment
+M	code.txt
+Switched to branch 'experiment'
+c288b017@E3002-13:~/Lab02$ git add code.txtxt
+fatal: pathspec 'code.txtxt' did not match any files
+c288b017@E3002-13:~/Lab02$ git add code.txt
+c288b017@E3002-13:~/Lab02$ git commit
+[experiment 1310a8b] Second commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+c288b017@E3002-13:~/Lab02$ git checkout master
+Switched to branch 'master'
+c288b017@E3002-13:~/Lab02$ git add code.txt
+c288b017@E3002-13:~/Lab02$ git commit
+[master e5aaf22] Third commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+c288b017@E3002-13:~/Lab02$ git merge experiment
+Auto-merging code.txt
+CONFLICT (content): Merge conflict in code.txt
+Automatic merge failed; fix conflicts and then commit the result.
+c288b017@E3002-13:~/Lab02$ 
+
